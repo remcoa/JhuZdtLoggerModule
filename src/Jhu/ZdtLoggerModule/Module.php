@@ -49,6 +49,7 @@ class Module implements
         // we initialize ours to add our functionalities
         if (
             $config['jhu']['zdt_logger']['logger'] != 'Zend\Log\Logger' &&
+            isset($config['zenddevelopertools']['toolbar']['enabled']) &&
             $config['zenddevelopertools']['toolbar']['enabled'] == true
         ) {
             $application->getServiceManager()->get('jhu.zdt_logger');
